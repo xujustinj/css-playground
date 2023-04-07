@@ -6,6 +6,10 @@ Every HTML file is a standalone example with inline styles. Converting the code 
 
 ## Examples
 
+- [Typewriter](typewriter.html)
+    - CSS variables (the `var()` function)
+    - background animation
+
 - [Upside-Down](upside-down.html)
     - bottom-to-top layouts with `flex-direction: column-reverse`
     - defining an `onload` function to scroll to page bottom

@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>Typewriter</title>
+    <style>
+      @keyframes typing {
+        from {
+          background-size: 0 100%;
+          visibility: visible;
+        }
+        to {
+          background-size: calc(var(--length) * 1ch) 100%;
+          visibility: visible;
+        }
+      }
+
+      .typewriter {
+        /* Only works on monospace fonts... */
+        font-family: monospace;
+        color: transparent;
+
+        /* background-color: #000000 doesn't work because solid colors can't be sized */
+        /* linear-gradient(#000000 0% 100%) is just a solid piece of black */
+        background-image: linear-gradient(var(--colour, black) 0% 100%);
+        background-repeat: no-repeat;
+        visibility: hidden;
+
+        /* Use the text as a mask for the background. */
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        /* reveal the background in var(--length) steps, each var(--speed) long */
+        animation: typing;
+        animation-delay: calc(var(--delay, 0s));
+        animation-duration: calc(var(--length) * var(--speed, 0.03s));
+        animation-timing-function: steps(var(--length));
+        animation-fill-mode: forwards;
+      }
+
+      .typewriter > a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 400px">
+      <span class="typewriter" style="--length: 232">
+        This clever trick uses background animation to make text appear one
+        character at a time.
+        <br />
+        <br />
+        It works for multiple lines of text, so long as they are all contained
+        in the same span.
+        <br />
+        <br />
+        The animation here is at one character per 0.03 seconds.
+      </span>
+      <br />
+      <br />
+      <br />
+      <span
+        class="typewriter"
+        style="--length: 211; --speed: 0.01s; --delay: 7.96s"
+      >
+        This section appears after a delay of 7.96 seconds. It is faster, at one
+        character per 0.01 seconds.
+        <br />
+        <br />
+        By carefully setting the delay, we can make multiple disjoint sections
+        of typewriter text appear in succession.
+      </span>
+      <br />
+      <br />
+      <br />
+      <span
+        class="typewriter"
+        style="--length: 209; --speed: 0.05s; --delay: 11.07s"
+      >
+        This only works somewhat with tags. &lt;b&gt; and &lt;i&gt; work great,
+        but underlines (including those on links) do not.
+        <br />
+        <br />
+        Credit for this trick goes to <b>Temami Afif</b>'s amazing article:
+        <a
+          href="https://dev.to/afif/a-multi-line-css-only-typewriter-effect-3op3"
+          ><i>A Multi-line CSS only Typewriter effect</i></a
+        >
+      </span>
+      <br />
+      <br />
+      <br />
+      <span
+        class="typewriter"
+        style="--length: 150; --delay: 22.52s; --colour: red"
+      >
+        Unfortunately, all text in the same typewriter block has to be the same
+        colour. Thus, the link above had to be black.
+        <br />
+        <br />
+        Also, the font must be monospace.
+      </span>
+    </div>
+  </body>
+</html>
