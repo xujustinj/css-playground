@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Upside-Down</title>
+  </head>
+  <body onload="window.scrollTo(0, document.body.scrollHeight)">
+    <!-- <body> -->
+    <div style="display: flex; flex-direction: column-reverse; row-gap: 120px">
+      <div id="first">
+        <h1>First Section</h1>
+        <p>You may have noticed that you loaded into the page on the bottom.</p>
+        <p>
+          That is caused by a little bit of JavaScript in the onload function of
+          the body element.
+        </p>
+      </div>
+      <div id="second">
+        <h1>Second Section</h1>
+        <p>
+          The sections of this document are ordered from bottom to top using the
+          column-reverse flex layout direction.
+        </p>
+        <p>
+          Inside each section, the text is still read from top to bottom by
+          default. This can be changed by setting a column-reverse layout on the
+          section container.
+        </p>
+      </div>
+      <div id="third">
+        <h1>Third Section</h1>
+        <p>
+          If you inspect the HTML tree, you will see that the elements are in
+          the "correct" order.
+        </p>
+        <p>That is, the page is only upside-down in appearance.</p>
+      </div>
+      <div id="fourth">
+        <h1>Fourth Section</h1>
+        <p>
+          This approach is friendly to screen readers, which use the order of
+          the HTML tree.
+        </p>
+        <p>
+          If your browser has a read-aloud feature, you can try it out for
+          yourself.
+        </p>
+      </div>
+      <div id="fifth">
+        <h1>Fifth Section</h1>
+        <p>
+          That said, users who interact with your site visually will be somewhat
+          confused by the unintuitive direction of flow.
+        </p>
+        <p>
+          You should use upside-down layouts sparingly, and only when the design
+          of the site makes it natural.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
